@@ -1,2 +1,2 @@
 # server_pinger
-A cron job which pings your server in order to keep it active
+A cron job that pings your server periodically in order to keep it active
