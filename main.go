@@ -2,13 +2,24 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+	"os"
 	"time"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// read environment variables
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	// Define your API URL
-	apiUrl := ""
+	apiUrl := os.Getenv("URL")
+
 	// Create a ticker that ticks every minute
 	ticker := time.NewTicker(1 * time.Minute)
 
