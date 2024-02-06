@@ -18,7 +18,7 @@ func main() {
 	}
 
 	// Define your API URL
-	apiUrl := os.Getenv("URL")
+	apiUrl := os.Getenv("SERVER_URL")
 
 	// Create a ticker that ticks every minute
 	ticker := time.NewTicker(1 * time.Minute)
